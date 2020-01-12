@@ -19,6 +19,7 @@ var RedDancer = function (top, left, timeBetweenSteps) {
 RedDancer.prototype = Object.create(MakeDancer.prototype);
 RedDancer.prototype.step = function () {
   MakeDancer.prototype.step.call(this);
+  // turned off the toggle functionality for RebBees since it got in the way of the
   // this.$node.toggle();
 };
 RedDancer.prototype.constructor = MakeBlinkyDancer;

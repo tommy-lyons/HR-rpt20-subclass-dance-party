@@ -18,6 +18,7 @@ var BlueDancer = function(top, left, timeBetweenSteps) {
 BlueDancer.prototype = Object.create(MakeDancer.prototype);
 BlueDancer.prototype.step = function() {
   MakeDancer.prototype.step.call(this);
+  // deleted the toggle functionality here because we made the spin instead
   // this.$node.toggle();
 };
 BlueDancer.prototype.constructor = MakeBlinkyDancer;

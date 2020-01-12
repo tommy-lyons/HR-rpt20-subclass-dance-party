@@ -22,5 +22,4 @@ GreenDancer.prototype.step = function () {
     this.$node.toggle();
   }
 };
-
 GreenDancer.prototype.constructor = MakeBlinkyDancer;
