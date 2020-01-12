@@ -76,14 +76,9 @@ $(document).ready(function() {
 
   $('.swarm').on('click', function(event) {
     // on clicking swarm, we want to iterate over the bees array, and reassign them to
-    // a randomly generated position near the center of the window
-
-    // need to adjust the position of each element to be slightly different in some way
-    var height = $(window).height() / 4;
-    var width = $(window).width() / 4;
-    console.log(height, width);
+    // a central position, all moving together
     for (var i = 0; i < window.dancers.length; i++) {
-      window.dancers[i].swarm();
+      window.dancers[i].swarm(i);
     }
   });
 

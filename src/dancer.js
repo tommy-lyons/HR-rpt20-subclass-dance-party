@@ -36,23 +36,13 @@ MakeDancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
-MakeDancer.prototype.swarm = function (height, width) {
+MakeDancer.prototype.swarm = function (shift) {
+  var position = {
+    top: (($(window).height() / 2) + (shift * 10)),
+    left: (($(window).width() / 2) + (shift * 10))
+  };
 
+  this.$node.css(position);
   this.$node.removeClass('blinking');
   this.$node.addClass('orbit');
-
-  console.log(height, width);
-  if (height === undefined && width === undefined) {
-    var position = {
-      top: ($(window).height() / 2), // otherwise 'body'
-      left: ($(window).width() / 2) // ""
-    };
-    this.$node.css(position);
-  } else {
-    var randomPosition = {
-      top: parseInt(height) + 'px',
-      left: parseInt(width) + 'px'
-    };
-    this.$node.css(randomPosition);
-  }
 };
