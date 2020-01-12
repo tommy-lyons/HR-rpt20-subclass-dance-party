@@ -83,49 +83,10 @@ $(document).ready(function() {
     var width = $(window).width() / 4;
     console.log(height, width);
     for (var i = 0; i < window.dancers.length; i++) {
-
-      if (i === 0) {
-        window.dancers[i].swarm();
-      } else {
-        var height = $(window).height() / 100;
-        var width = $(window).width() / 100;
-        // taking a number that's a quarter of the way from the top left corner
-        // multiply it by 3, so it's 75% of the total dimension
-        // multiply it by a randon number between 0 and 1
-        // add that to the original height
-        // round down
-        height = Math.floor(Math.random() * (height * 50)) + (height*49);
-        width = Math.floor(Math.random() * (width * 50)) + (width*49);
-        window.dancers[i].swarm(height, width);
-      }
+      window.dancers[i].swarm();
     }
-
-    // need to get them to move around
-
   });
+
 });
 
-// height = undefined
-// width = undefined
-
-// height = 279.25
-// width  = 319.25
-
-// height = 1006.25
-// width = 603.25
-
-// height
-// width
-
-// height
-// width
-
-// height
-// width
-
-// height
-// width
-
-// height
-// width
 
