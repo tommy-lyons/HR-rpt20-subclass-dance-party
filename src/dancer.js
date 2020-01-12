@@ -22,7 +22,7 @@ MakeDancer.prototype.step = function() {
   // the basic dancer doesn't do anything interesting at all on each step,
   // it just schedules the next step
   // debugger;
-  // setTimeout(function() { context.step(); }, this.time);
+  setTimeout(function() { context.step(); }, this.time);
 };
 
 MakeDancer.prototype.setPosition = function(top, left) {
@@ -36,3 +36,23 @@ MakeDancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
+MakeDancer.prototype.swarm = function (height, width) {
+
+  this.$node.removeClass('blinking');
+  this.$node.addClass('orbit');
+
+  console.log(height, width);
+  if (height === undefined && width === undefined) {
+    var position = {
+      top: ($(window).height() / 2), // otherwise 'body'
+      left: ($(window).width() / 2) // ""
+    };
+    this.$node.css(position);
+  } else {
+    var randomPosition = {
+      top: parseInt(height) + 'px',
+      left: parseInt(width) + 'px'
+    };
+    this.$node.css(randomPosition);
+  }
+};

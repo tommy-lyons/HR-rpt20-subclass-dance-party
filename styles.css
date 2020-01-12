@@ -3,6 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
+  background-color: #D6F7FF;
   background-image: url('./img/beeHiveLrg.png');
   background-size: 95%;
   background-repeat: no-repeat;
@@ -10,47 +11,59 @@ body{
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: #D9B60B;
+  font-family: Impact;
+  text-decoration: none;
 }
 .title, .addDancerButton, .button {
   padding:5px 12px;
-  /* float:right; */
   text-align: center;
 }
 .topbar{
-  height:32px;
-  background-color: #555;
+  height: 32px;
+  font-size: 25px;
+  background-color: #D6F7FF;
+  padding-top: 15px;
+  padding-left: 20px;
 }
 .toptopbar{
-  height:32px;
-  background-color: #555;
+  height: 32px;
+  background-color: #D6F7FF;
+  font-size: 25px;
+  padding-top: 15px;
+  padding-left: 20px;
 }
 .title{
-  background-color: #555;
+  background-color: #D6F7FF;
   float: center;
+  padding-top: 100px;
 }
 .dancer{
-  /* border:10px solid red;
-  border-radius:10px; */
   position:absolute;
 }
-/* .addRed{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
+.spinning {
+  -webkit-animation: rotateY 1s infinite linear;
+  animation: rotateY 1s infinite linear;
+}
+@-webkit-keyframes rotateY {
+  to { -webkit-transform: rotateY(360deg); }
+}
+@keyframes rotateY {
+  to { transform: rotateY(360deg); }
+}
+.orbit {   /* from https://www.useragentman.com/blog/2013/03/03/animating-circular-paths-using-css3-transitions/ */
+  -webkit-animation: myOrbit 4s linear infinite; /* Chrome, Safari 5 */
+          animation: myOrbit 4s linear infinite; /* Chrome, Firefox 16+,
+                                                    IE 10+, Safari 5*/
+}
+@-webkit-keyframes myOrbit {
+  from { -webkit-transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  to   { -webkit-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+@keyframes myOrbit {
+  from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
 
-}
-.green{
-  border:10px solid green;
-  border-radius:10px;
-  position:absolute;
-}
-.blue{
-  border:10px solid blue;
-  border-radius:10px;
-  position:absolute;
-} */
-
-/* <img onmouseover="bigImg(this)" src="smiley.gif" alt="Smiley"> */
 
 
